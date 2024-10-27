@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table width="70%" align="center"border="1" class="masterTable" id="masterTable">
+
+	<tr><td width="10%"><table id="naviArea" border="0" style="margin-bottom:30%"></table></td>
+				
+		<td width="88%"><table align="center" border="0" width="90%">
+			<tr><td align="center"  colspan="2"><b><h2>Data Types</h2></b>  
+			
+						<span style="color:blue;float: left">
+							<b>Timer &nbsp; &nbsp;:&nbsp; &nbsp; &nbsp;</b>
+							<span style="color:red"><b><span id="myTimer"></span></b></span></span>
+							
+						<span align="right" style="color:blue;float: right">
+							<b>My Score &nbsp; &nbsp;:&nbsp; &nbsp; &nbsp;</b>
+							<span style="color:red"><b><span id="score">0</span></b></span></span>
+					</td></tr>
+					
+			<tr><td>&nbsp;</td></tr>
+					
+			<tr><td></td>		
+				<td><table id="inputArea" width="100%" border="0" class="inputArea"></table></td></tr>
+			
+			<tr><td align="center" colspan="2"><input class="buttons" type="button" onclick="validateAnswer()" value="Validate" id="validateBtn" /></td></tr>
+			<tr><td align="center" colspan="2"><input class="buttons" type="button" onclick="showNext()" value="Next" id="nextBtn" style="display:none"/></td></tr></table>
+		</td>
+	</tr>
+</table>
+
+	<div id="corAns" class="corAns">
+		<br /><b>Excellent. Good Job!!!</b> <br /><br />
+			<img src="https://media.tenor.com/5987hNPhX_EAAAAC/dance-cute.gif" class="ansPop" /><br /><br />
+			<input type="button" class="popBtn" id="crtBtn" value="Close" onclick="closeMe('corAns')"/>
+	</div>
+	
+	<div id="wrongAns" class="wrongAns">
+		<br /><b>Hmmm... Think Again!!!</b> <br /><br />
+			<img src="https://www.icegif.com/wp-content/uploads/icegif-3640.gif" class="ansPop" /><br /><br />
+			<input type="button" class="popBtn" id="incrBtn" value="Close" onclick="closeMe('wrongAns')"/>
+	</div>
+	
+	<table id="naviTable" style="display:none">
+	
+		<tr><td>
+			<input type="button" value="1" onclick="gotoQuest(1)" id="gotoButton-1" />
+			<input type="button" value="2" onclick="gotoQuest(2)" id="gotoButton-2" />
+			<input type="button" value="3" onclick="gotoQuest(3)" id="gotoButton-3" />
+			<input type="button" value="4" onclick="gotoQuest(4)" id="gotoButton-4" />
+			<input type="button" value="5" onclick="gotoQuest(5)" id="gotoButton-5" />
+			<input type="button" value="6" onclick="gotoQuest(6)" id="gotoButton-6" />
+			<input type="button" value="7" onclick="gotoQuest(7)" id="gotoButton-7" />
+			<input type="button" value="8" onclick="gotoQuest(8)" id="gotoButton-8" />
+			<input type="button" value="9" onclick="gotoQuest(9)" id="gotoButton-9" />
+			<input type="button" value="10" onclick="gotoQuest(10)" id="gotoButton-10" />
+			<input type="button" value="11" onclick="gotoQuest(11)" id="gotoButton-11" />
+			<input type="button" value="12" onclick="gotoQuest(12)" id="gotoButton-12" />
+			<input type="button" value="13" onclick="gotoQuest(13)" id="gotoButton-13" />
+			<input type="button" value="14" onclick="gotoQuest(14)" id="gotoButton-14" />
+			<input type="button" value="15" onclick="gotoQuest(15)" id="gotoButton-15" />
+			<input type="button" value="16" onclick="gotoQuest(16)" id="gotoButton-16" />
+			<input type="button" value="17" onclick="gotoQuest(17)" id="gotoButton-17" />
+			<input type="button" value="18" onclick="gotoQuest(18)" id="gotoButton-18" />
+			<input type="button" value="19" onclick="gotoQuest(19)" id="gotoButton-19" />
+			<input type="button" value="20" onclick="gotoQuest(20)" id="gotoButton-20" />
+			<input type="button" value="21" onclick="gotoQuest(21)" id="gotoButton-21" />
+			<input type="button" value="22" onclick="gotoQuest(22)" id="gotoButton-22" />
+			<input type="button" value="23" onclick="gotoQuest(23)" id="gotoButton-23" />
+			<input type="button" value="24" onclick="gotoQuest(24)" id="gotoButton-24" />
+			<input type="button" value="25" onclick="gotoQuest(25)" id="gotoButton-25" />
+			<input type="button" value="26" onclick="gotoQuest(26)" id="gotoButton-26" />
+			<input type="button" value="27" onclick="gotoQuest(27)" id="gotoButton-27" />
+			<input type="button" value="28" onclick="gotoQuest(28)" id="gotoButton-28" />
+			<input type="button" value="29" onclick="gotoQuest(29)" id="gotoButton-29" />
+			<input type="button" value="30" onclick="gotoQuest(30)" id="gotoButton-30" />
+			
+		</td></tr>
+	</table>
+	
+	<div name="masterArea" style="display:none">
+		<table id="questTable-1" width="100%">			
+			<tr><td><b>Question 1</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="5" readonly>	
+			
+		Which of these is not a primitive data type?				
+				</textarea><br/><br/></td></tr>
+				
+			<tr><td><input type="radio" value="1-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>boolean</b></span></td></tr>
+			<tr><td><input type="radio" value="1-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>String</b></span></td></tr>
+			<tr><td><input type="radio" value="1-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>double</b></span></td></tr>
+			<tr><td><input type="radio" value="1-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>short</b></span></td></tr>
+		</table>
+		
+		
+		<table id="questTable-2" width="100%">			
+			<tr><td><b>Question 2</b></br></br></td></tr>
+
+			<tr><td>
+				<textarea class="txtArea" rows="10" readonly>
+				
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a = 'a';
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="2-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="2-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>'a'</b></span></td></tr>
+			<tr><td><input type="radio" value="2-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="2-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>65</b></span></td></tr>
+		
+		</table>
+		
+		<table id="questTable-3" width="100%">			
+			<tr><td><b>Question 3</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="3-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="3-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>0x6783F</b></span></td></tr>
+			<tr><td><input type="radio" value="3-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="3-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-4" width="100%">			
+			<tr><td><b>Question 4</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a = true;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="4-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>true</b></span></td></tr>
+			<tr><td><input type="radio" value="4-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from boolean to int</b></span></td></tr>
+			<tr><td><input type="radio" value="4-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="4-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>The local variable b may not have been initialized</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-5" width="100%">			
+			<tr><td><b>Question 5</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a = "a";
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="5-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="5-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="5-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from String to int</b></span></td></tr>
+			<tr><td><input type="radio" value="5-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>"a"</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-6" width="100%">			
+			<tr><td><b>Question 6</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a = 97;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="6-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="6-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="6-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from char to int</b></span></td></tr>
+			<tr><td><input type="radio" value="6-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+		</table>
+		
+		
+		<table id="questTable-7" width="100%">			
+			<tr><td><b>Question 7</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				int a = 2.0;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="7-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from double to int</b></span></td></tr>
+			<tr><td><input type="radio" value="7-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>2</b></span></td></tr>
+			<tr><td><input type="radio" value="7-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>2.0</b></span></td></tr>
+			<tr><td><input type="radio" value="7-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-8" width="100%">			
+			<tr><td><b>Question 8</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				short a = 5;
+				int b = a;
+				System.out.print(b);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="8-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from short to int</b></span></td></tr>
+			<tr><td><input type="radio" value="8-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="8-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="8-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>b</b></span></td></tr>
+		</table>
+		
+	<table id="questTable-9" width="100%">			
+			<tr><td><b>Question 9</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args) 
+			{
+				long a = 5;
+				int b = a;
+				System.out.print(b);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="9-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from long to int</b></span></td></tr>
+			<tr><td><input type="radio" value="9-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="9-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="9-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>b</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-10" width="100%">			
+			<tr><td><b>Question 10</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5 + 6;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="10-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>5+6</b></span></td></tr>
+			<tr><td><input type="radio" value="10-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>11</b></span></td></tr>
+			<tr><td><input type="radio" value="10-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="10-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-11" width="100%">			
+			<tr><td><b>Question 11</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5, b = 6;
+				a = a + b;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="11-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+			<tr><td><input type="radio" value="11-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="11-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="11-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-12" width="100%">			
+			<tr><td><b>Question 12</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5, b = 6;
+				a = (short) (a + b);
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="12-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+			<tr><td><input type="radio" value="12-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>11</b></span></td></tr>
+			<tr><td><input type="radio" value="12-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="12-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-13" width="100%">			
+			<tr><td><b>Question 13</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5, b = 6;
+				a = (short) (a) + b;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="13-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+			<tr><td><input type="radio" value="13-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>11</b></span></td></tr>
+			<tr><td><input type="radio" value="13-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+			<tr><td><input type="radio" value="13-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-14" width="100%">			
+			<tr><td><b>Question 14</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5, b = 6;
+				a = (short) (a) + (short)b;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="14-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The local variable a may not have been initialized</b></span></td></tr>
+			<tr><td><input type="radio" value="14-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>11</b></span></td></tr>
+			<tr><td><input type="radio" value="14-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+			<tr><td><input type="radio" value="14-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-15" width="100%">			
+			<tr><td><b>Question 15</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 5, b = 6;
+				a = short((short) (a) + (short)b);
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="15-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>11</b></span></td></tr>
+			<tr><td><input type="radio" value="15-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Syntax error</b></span></td></tr>
+			<tr><td><input type="radio" value="15-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+			<tr><td><input type="radio" value="15-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-16" width="100%">			
+			<tr><td><b>Question 16</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				byte a = 187;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="16-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>187</b></span></td></tr>
+			<tr><td><input type="radio" value="16-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from byte to int</b></span></td></tr>
+			<tr><td><input type="radio" value="16-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to byte</b></span></td></tr>
+			<tr><td><input type="radio" value="16-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+		</table>
+
+		<table id="questTable-17" width="100%">			
+			<tr><td><b>Question 17</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				byte a = (byte)128;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="17-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>128</b></span></td></tr>
+			<tr><td><input type="radio" value="17-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from byte to int</b></span></td></tr>
+			<tr><td><input type="radio" value="17-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to byte</b></span></td></tr>
+			<tr><td><input type="radio" value="17-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>-128</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-18" width="100%">			
+			<tr><td><b>Question 18</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				byte a = -128;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="18-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>128</b></span></td></tr>
+			<tr><td><input type="radio" value="18-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from byte to int</b></span></td></tr>
+			<tr><td><input type="radio" value="18-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to byte</b></span></td></tr>
+			<tr><td><input type="radio" value="18-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>-128</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-19" width="100%">			
+			<tr><td><b>Question 19</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				long a = 2147483648;   // int range + 1
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="19-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The literal 2147483648 of type int is out of range </b></span></td></tr>
+			<tr><td><input type="radio" value="19-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>2147483648</b></span></td></tr>
+			<tr><td><input type="radio" value="19-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to long</b></span></td></tr>
+			<tr><td><input type="radio" value="19-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>-2147483648</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-20" width="100%">			
+			<tr><td><b>Question 20</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				float a = 2.0;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="20-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The literal 2.0 of type double is out of range </b></span></td></tr>
+			<tr><td><input type="radio" value="20-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>2.0</b></span></td></tr>
+			<tr><td><input type="radio" value="20-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from double to float</b></span></td></tr>
+			<tr><td><input type="radio" value="20-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>2</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-21" width="100%">			
+			<tr><td><b>Question 21</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				float a = 2.0f;
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="21-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The literal 2.0 of type double is out of range </b></span></td></tr>
+			<tr><td><input type="radio" value="21-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>2.0</b></span></td></tr>
+			<tr><td><input type="radio" value="21-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from double to float</b></span></td></tr>
+			<tr><td><input type="radio" value="21-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>2</b></span></td></tr>
+		</table>
+
+		<table id="questTable-22" width="100%">			
+			<tr><td><b>Question 22</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="14" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				float a = 2.0f;
+				double b = 3.0;
+				
+				a = a + b;
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="22-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The literal 2.0 of type double is out of range </b></span></td></tr>
+			<tr><td><input type="radio" value="22-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>5.0</b></span></td></tr>
+			<tr><td><input type="radio" value="22-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from double to float</b></span></td></tr>
+			<tr><td><input type="radio" value="22-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-23" width="100%">			
+			<tr><td><b>Question 23</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="14" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				float a = 2.0f;
+				double b = 3.0;
+				
+				b = a + b;
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="23-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>The literal 2.0 of type double is out of range </b></span></td></tr>
+			<tr><td><input type="radio" value="23-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>5.0</b></span></td></tr>
+			<tr><td><input type="radio" value="23-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from double to float</b></span></td></tr>
+			<tr><td><input type="radio" value="23-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-24" width="100%">			
+			<tr><td><b>Question 24</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="14" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{
+				short a = 2;
+				
+				a = a + 3;
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="24-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to short</b></span></td></tr>
+			<tr><td><input type="radio" value="24-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>5.0</b></span></td></tr>
+			<tr><td><input type="radio" value="24-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from short to int</b></span></td></tr>
+			<tr><td><input type="radio" value="24-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>5</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-25" width="100%">			
+			<tr><td><b>Question 25</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="14" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				String a = "2";
+				int b = (int) a;
+				
+				System.out.print(b);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="25-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from String to int</b></span></td></tr>
+			<tr><td><input type="radio" value="25-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>2</b></span></td></tr>
+			<tr><td><input type="radio" value="25-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to String</b></span></td></tr>
+			<tr><td><input type="radio" value="25-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>"2"</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-26" width="100%">			
+			<tr><td><b>Question 26</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				char a = 'a';
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="26-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to char</b></span></td></tr>
+			<tr><td><input type="radio" value="26-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="26-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="26-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>'a'</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-27" width="100%">			
+			<tr><td><b>Question 27</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				char a = 97;
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="27-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to char</b></span></td></tr>
+			<tr><td><input type="radio" value="27-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>97</b></span></td></tr>
+			<tr><td><input type="radio" value="27-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>a</b></span></td></tr>
+			<tr><td><input type="radio" value="27-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>'a'</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-28" width="100%">			
+			<tr><td><b>Question 28</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				char a = 'a' + 'a';
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="28-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Type mismatch: cannot convert from int to char</b></span></td></tr>
+			<tr><td><input type="radio" value="28-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Â (some special character)</b></span></td></tr>
+			<tr><td><input type="radio" value="28-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>194</b></span></td></tr>
+			<tr><td><input type="radio" value="28-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>2a</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-29" width="100%">			
+			<tr><td><b>Question 29</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				char a = '00';
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="29-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Invalid character constant</b></span></td></tr>
+			<tr><td><input type="radio" value="29-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Â (some special character)</b></span></td></tr>
+			<tr><td><input type="radio" value="29-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>00</b></span></td></tr>
+			<tr><td><input type="radio" value="29-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>0</b></span></td></tr>
+		</table>
+		
+		<table id="questTable-30" width="100%">			
+			<tr><td><b>Question 30</b></br></br></td></tr>
+
+			<tr><td><textarea class="txtArea" rows="10" readonly>					
+		public class TestClass
+		{
+			public static void main(String[] args)
+			{						
+				char a = '\u00';
+				
+				System.out.print(a);
+			}
+		}
+				</textarea></td></tr>
+				
+			<tr><td><input type="radio" value="30-A" name="inputRadio" /><span>A) &nbsp; &nbsp;  <b>Invalid character constant</b></span></td></tr>
+			<tr><td><input type="radio" value="30-B" name="inputRadio" /><span>B) &nbsp; &nbsp;  <b>Â (some special character)</b></span></td></tr>
+			<tr><td><input type="radio" value="30-C" name="inputRadio" /><span>C) &nbsp; &nbsp;  <b>00</b></span></td></tr>
+			<tr><td><input type="radio" value="30-D" name="inputRadio" /><span>D) &nbsp; &nbsp;  <b>Invalid unicode</b></span></td></tr>
+		</table>
+		
+	</div>
+	
+	<div id="nextArea" style="display:none">1</div>
+	
+	<script>
+	
+		var currTable = document.getElementById("nextArea").innerHTML;
+		document.getElementById("inputArea").innerHTML = document.getElementById("questTable-" + currTable).innerHTML;
+		document.getElementById("naviArea").innerHTML = document.getElementById("naviTable").innerHTML;
+		
+	</script>
+
+
+</body>
+</html>

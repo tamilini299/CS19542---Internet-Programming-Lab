@@ -1,0 +1,17 @@
+/** Registration page CSS **/
+
+#cardForm {
+	border:2px solid #400000;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+	max-width: 60%;
+	padding-top: 20px;
+  	/*padding-bottom: 30px;*/
+  
+}
+
+.cardFormat {
+	font-size: 10px;
+	font-style: oblique;
+}

@@ -1,0 +1,12 @@
+/** Registration page CSS **/
+
+#regForm {
+	border:2px solid #400000;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+	max-width: 70%;
+	/*padding-top: 50px;*/
+  	/*padding-bottom: 30px;*/
+  
+}

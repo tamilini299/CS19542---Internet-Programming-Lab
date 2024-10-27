@@ -1,0 +1,25 @@
+/** Registration success complete page CSS **/
+
+#regSucc {
+	border:2px solid #400000;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+	max-width: 50%;
+	padding-top: 40px;
+  	padding-bottom: 50px;
+  	padding-left: 50px;
+  	padding-right: 50px;
+}
+
+body {
+	padding-top: 80px;
+  	padding-bottom: 50px;
+  	padding-left: 50px;
+  	padding-right: 50px;
+  
+}
+
+h3{
+	text-align: center;
+}

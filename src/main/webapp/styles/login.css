@@ -1,0 +1,24 @@
+/** Login page CSS **/
+
+
+#loginForm {
+	border:2px solid #400000;
+	width:50%;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+}
+
+.mainHeader{	
+	text-align: center;
+	padding: 70px, 50px, 70px, 50px;
+}
+
+.loginTable {
+  padding: 70px, 50px, 70px, 50px;
+  
+}
+
+.regText {
+	  font-style: oblique;
+}

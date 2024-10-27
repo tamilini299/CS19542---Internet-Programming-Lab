@@ -1,0 +1,98 @@
+.masterTable {
+	display: none;
+}
+
+.responseDiv {
+	display: none;
+}
+
+.inputArea {
+	font-size:1em;
+	width:80%;
+}
+
+.loginErr{
+	border:1px solid #32058C;
+	width:100%;
+	background-color:#E7E1E0;
+	float: center;
+	margin:0 auto;
+	color: green;
+	display: none;
+}
+
+.loginDiv{
+	border:2px solid #32058C;
+	width:50%;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+}
+.txtArea{
+		width:100%;
+		font-size:0.8em;
+		font-family:Verdana;
+		color:#1b334b;
+		border:2px solid #32058C;
+		background-color:#f8f8f8;
+		padding:5px;
+		margin:5px;
+		resize: none;
+		overflow:hidden;
+		outline: none;
+		text-align: left;
+}
+
+.buttons{
+	/*width:100%;*/
+	padding:5px;
+	margin:5px;
+}	
+
+.buttons-link{
+	width:30%;
+	padding:5px;
+	margin:5px;
+	/*border: none;*/
+	color: #0B57D0;
+}
+
+.corAns{
+	width:30%;
+	padding:5px;
+	margin:5px;
+	background-color:#A3C299;
+	display:none;
+	float: right;
+	min-height:80px; 
+	width:200px;
+	text-align: center;
+	position:absolute;
+	z-index: 1;
+	left: 50%;
+	top: 30%;
+	border: red;
+	border:3px solid black;
+}
+
+.wrongAns{
+	width:30%;
+	padding:5px;
+	margin:5px;
+	background-color:#C8B9BC;
+	display:none;
+	float: right;
+	min-height:80px; 
+	width:200px;
+	text-align: center;
+	position:absolute;
+	z-index: 1;
+	left: 50%;
+	top: 30%;
+	border: red;
+	border:3px solid green;
+}
+
+.ansPop{		
+	width : 60%;		
+}

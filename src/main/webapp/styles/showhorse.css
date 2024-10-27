@@ -1,0 +1,35 @@
+/** Registration page CSS **/
+
+#horseInfo {
+	border:2px solid #400000;
+	background-color:#f8f8f8;
+	float: center;
+	margin:0 auto;
+	max-width: 70%;
+	/*padding-top: 10px;*/
+}
+
+.buttons-horse{
+	padding:5px;
+	margin:5px;
+	width:60%;
+	padding:5px;
+	margin:5px;
+	color: #0B57D0;
+}
+
+.headText{	
+	text-align: right;
+	
+}
+
+.imgClass {
+	align: right;
+	width: 8%;
+	height: 8%;
+}
+
+#wonDiv{
+	border: 2px solid blue;
+	text-align:center
+}

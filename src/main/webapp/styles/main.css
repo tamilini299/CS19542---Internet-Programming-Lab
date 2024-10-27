@@ -1,0 +1,45 @@
+/*
+	Global Styles
+*/
+
+a {
+  text-decoration: none;
+}
+
+.headText{	
+	text-align: right;
+	
+}
+
+.imgClass {
+	align: right;
+	width: 8%;
+	height: 8%;
+}
+
+body {
+  font-family: "Gill Sans";
+  /*background-image: url("../images/background/bg6.jpg");*/
+  background-repeat: no-repeat;
+  background-size: 3000px;
+  max-width: 80%;
+  height: auto;
+ /* background-color:#f8f4ff;*/
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+
+.buttons-login{
+	padding:5px;
+	margin:5px;
+	width:40%;
+	padding:5px;
+	margin:5px;
+	color: #0B57D0;
+}
+
+.errDiv {
+	background-color:#ffede8;
+	font-family:Palatino;
+}
