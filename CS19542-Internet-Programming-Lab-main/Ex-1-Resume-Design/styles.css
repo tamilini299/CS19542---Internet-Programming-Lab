@@ -1,0 +1,104 @@
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+*{
+    box-sizing: border-box;
+    margin:10px;
+    padding: 0px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: Montserrat;
+}
+#master{
+    display:flex;
+    justify-content:center;
+    height: 100vh;
+}
+#leftCol{
+    background-color: beige;
+    width: 15%;
+}
+.left h2{
+    padding:10px
+}
+#leftCol li{
+    color: white;
+}
+.left1{
+    background-color: rgb(219, 147, 147);
+}
+.left2{
+    background-color: rgb(143, 72, 72);
+}
+#centerCol{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 65%;
+}
+#intro{
+    background-color: azure;
+}
+#h1{
+    text-align: center;
+}
+#desc{
+    background-color: rgb(97, 254, 254);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#desc ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#desc ul li{
+    float:left;
+    padding: 10px;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+}
+#main div{
+    border: 1px solid black;
+    width: 40%;
+    margin: 10px;
+    transition: 0.4s;
+}
+#main div:hover{
+    box-shadow: 10px 10px 1px;
+}
+#main div h2{
+    text-align: center;
+}
+#rightCol{
+    width:20%;
+    background-color: darkslategray;
+}
+#rightCol p{
+    color: white;
+}
+#imageFrame{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+
+}
+#image{ 
+    max-width: 86%;
+    max-height: 30vh;
+    clip-path: circle();
+    object-fit: cover;
+    object-position: top;
+}
+#contact{
+    color: white;
+}
+footer{
+    text-align: center;
+}
